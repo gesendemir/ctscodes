@@ -52,11 +52,12 @@ public class mainc {
 
 
 	public static boolean allContained(long[] a1, long[] a2) {
-		if(a1.length == 0) return true;
-		if(a2.length == 0) return false;
+		if(a1.length == 0) return true; //if first array is length 0 contained in every array.
+		if(a2.length == 0) return false; //if second array is lengt 0, any array is contained.
 		Arrays.sort(a2);
 		
 		for(int i = 0; i < a1.length; i++) {
+			//binary search finds the first one in array, if there is no match returns negative number.
 			 if(Arrays.binarySearch(a2, a1[i]) < 0) return false;
 				
 		}
